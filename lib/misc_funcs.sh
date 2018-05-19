@@ -77,15 +77,15 @@ function check_stack() {
 
   if [ ! -f "${cache_path}/stack" ] || [ $(cat "${cache_path}/stack") != "${STACK}" ]; then
     output_section "Stack changed, will rebuild"
-    rm -rf ${cache_path}/*
+#    rm -rf ${cache_path}/*
   fi
 
   echo "${STACK}" > "${cache_path}/stack"
 }
 
 function clean_cache() {
-  if [ $always_rebuild = true ]; then
-    output_section "Cleaning all cache to force rebuilds"
-    rm -rf $cache_path/*
-  fi
+#  if [ $always_rebuild = true ]; then
+#    output_section "Cleaning all cache to force rebuilds"
+#    rm -rf $cache_path/*
+#  fi
 }
