@@ -98,6 +98,11 @@ function compile_app() {
 
   cd $build_path
   output_section "Compiling"
+
+  echo "rustup path4: `which rustup`"
+  echo "cargo path4: `which cargo`"
+  echo "Updated PATH4: $PATH"
+
   mix compile --force || exit 1
 
   mix deps.clean --unused
