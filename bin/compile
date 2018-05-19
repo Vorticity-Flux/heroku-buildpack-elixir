@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+echo "rustup path3: `which rustup`"
+echo "cargo path3: `which cargo`"
+echo "Updated PATH3: $PATH"
+
 # If this var is set to true later on,
 # then elixir and rebar will be rebuilt
 erlang_changed=false
